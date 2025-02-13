@@ -4,8 +4,11 @@
   margin-bottom: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, "Helvetica Neue", Helvetica, sans-serif;
   font-size: medium;
+  background-color: rgb(57, 54, 54);
 }
 
 .h2cab {
     font-size: 2rem;
+    padding-left: 10px;
+    color: whitesmoke;
 }

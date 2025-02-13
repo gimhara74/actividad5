@@ -1,11 +1,15 @@
 
-<header class="head">
-    <h1>Añade tu nueva aventura</h1><button class="newadventur" (clic)="clickheader()">Nueva</button>
+<!--
+background-color: rgb(57, 54, 54);
+-->
+<main class="main">
+<section class="section">
+
+<form class="frm"> 
+  <header class="head">
+    <h1 class="titleh1">Añade tu nueva tanda</h1><button class="newadventur" (click)="clickheader()">Nueva</button>
   </header>
-  
 
-
-<form class="frm">    
   <div class="form-group">
     <label for="fecha">Fecha:</label>
     <input type="date" id="fecha" name="fecha">
@@ -26,8 +30,23 @@
     <textarea id="articulo" name="articulo"></textarea> 
   </div>
   
-  <button class="submit" type="submit" (clic)="clickheader()">Publicar</button>
+  <button class="submit" type="submit" (click)="clickheader()">Publicar</button>
+  
 </form>
   
+<div class="adventures">
+  <h2 class="titleh2">Tandas</h2>
+  <ul class="list">
+    
+  <li *ngFor="let publicacion of arrPublicaciones" class="item">
+    <h3 class="title">{{publicacion.titulo}}</h3>
+    <p class="date">{{publicacion.fecha}}</p>
+    <img class="img" src="{{publicacion.imagen}}" alt="{{publicacion.titulo}}">
+    <p class="article">{{publicacion.noticia}}</p>
+  </li>
+  </ul>
+
+</div>
+</section>
   
- 
+</main>   
