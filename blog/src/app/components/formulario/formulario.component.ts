@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './formulario.component.css'
 })
 export class FormularioComponent {
+  
+  clickheader():void {
+    console.log('click en header JHONNY 16');
+  }
+
 
 }
