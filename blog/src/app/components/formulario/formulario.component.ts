@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class FormularioComponent {
 titleHead: string = 'Añade tu nueva tanda';
+visibleFrm: boolean = true;
 
   arrPublicaciones: IPublicacion[] = [
     {
@@ -37,10 +38,14 @@ titleHead: string = 'Añade tu nueva tanda';
   }
   clickheader() {
 
-    
-    //alert('Has hecho clic en el header');
+    console.log('Has hecho clic en el header');
+    //alert('Has hecho clic en el header MARTA');
     
     // Aquí puedes agregar la lógica que desees ejecutar cuando se haga clic en el botón
+  }
+
+  hidenfrm(): void {
+    this.visibleFrm = !this.visibleFrm;
   }
 
 

@@ -5,9 +5,13 @@ background-color: rgb(57, 54, 54);
 <main class="main">
 <section class="section">
 
+  <button (click)="hidenfrm()">hiden</button>
+  
+
+  @if (visibleFrm) {
 <form class="frm"> 
   <header class="head">
-    <h1 class="titleh1">{{titleHead}}</h1><button class="newadventur" (click)="clickheader()">Nueva</button>
+    <h1 class="titleh1">{{titleHead}}</h1><button type="button" class="newadventur" (click)="clickheader()">Nueva</button>
   </header>
 
   <div class="form-group">
@@ -30,10 +34,10 @@ background-color: rgb(57, 54, 54);
     <textarea id="articulo" name="articulo"></textarea> 
   </div>
   
-  <button class="submit" type="submit" (click)="clickheader()">Publicar</button>
-  
+  <button class="submit" type="button" (click)="clickheader()">Publicar</button>  
 </form>
-  
+}
+
 <div class="adventures">
   <h2 class="titleh2">Tandas</h2>
   <ul class="list">
@@ -47,6 +51,7 @@ background-color: rgb(57, 54, 54);
   </ul>
 
 </div>
+
 </section>
   
 </main>   

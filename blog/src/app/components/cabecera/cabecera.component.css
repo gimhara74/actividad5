@@ -1,14 +1,32 @@
 .cabecera {
   background-color: #f8f9fa;
   padding: 10px;
-  margin-bottom: 20px;
+  
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, "Helvetica Neue", Helvetica, sans-serif;
   font-size: medium;
   background-color: rgb(57, 54, 54);
+
+  position:sticky;
+  top: 0;
+
+  
+  
+ 
 }
 
 .h2cab {
+  
     font-size: 2rem;
     padding-left: 10px;
     color: whitesmoke;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white; /* Cambia esto según el color de fondo de tu cabecera */
+  z-index: 1000; /* Asegúrate de que la cabecera esté por encima de otros elementos */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opcional: agrega una sombra para darle un efecto de elevación */
+  padding: 10px 20px; /* Ajusta el relleno según sea necesario */
 }
