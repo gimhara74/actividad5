@@ -9,6 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './formulario.component.css'
 })
 export class FormularioComponent {
+titleHead: string = 'Añade tu nueva tanda';
+
   arrPublicaciones: IPublicacion[] = [
     {
       titulo: 'Noticia 1',
