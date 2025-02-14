@@ -1,57 +1,74 @@
-
 <!--
 background-color: rgb(57, 54, 54);
 -->
 <main class="main">
-<section class="section">
+  <section class="section">
+    <button (click)="hidenfrm()">hiden</button>
 
-  <button (click)="hidenfrm()">hiden</button>
-  
+    @if (visibleFrm) {
+    <form class="frm">
+      <header class="head">
+        <h1 class="titleh1">{{ titleHead }}</h1>
+        <button type="button" class="newadventur" (click)="clickheader()">
+          Nueva
+        </button>
+      </header>
 
-  @if (visibleFrm) {
-<form class="frm"> 
-  <header class="head">
-    <h1 class="titleh1">{{titleHead}}</h1><button type="button" class="newadventur" (click)="clickheader()">Nueva</button>
-  </header>
+      <div class="form-group">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" />
+      </div>
 
-  <div class="form-group">
-    <label for="fecha">Fecha:</label>
-    <input type="date" id="fecha" name="fecha">
-  </div>
+      <div class="form-group">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" />
+      </div>
 
-  <div class="form-group">
-    <label for="titulo">Título:</label>
-    <input type="text" id="titulo" name="titulo">
-  </div>
-  
-  <div class="form-group">
-    <label for="img">Imagen:</label>
-    <input type="text" id="img" name="img">
-  </div>
-  
-  <div class="form-group">
-    <label for="articulo">Artículo:</label>
-    <textarea id="articulo" name="articulo"></textarea> 
-  </div>
-  
-  <button class="submit" type="button" (click)="clickheader()">Publicar</button>  
-</form>
-}
+      <div class="form-group">
+        <label for="img">Imagen:</label>
+        <input type="text" id="img" name="img" />
+      </div>
 
-<div class="adventures">
-  <h2 class="titleh2">Tandas</h2>
-  <ul class="list">
-    
-  <li *ngFor="let publicacion of arrPublicaciones" class="item">
-    <h3 class="title">{{publicacion.titulo}}</h3>
-    <p class="date">{{publicacion.fecha}}</p>
-    <img class="img" src="{{publicacion.imagen}}" alt="{{publicacion.titulo}}">
-    <p class="article">{{publicacion.noticia}}</p>
-  </li>
-  </ul>
+      <div class="form-group">
+        <label for="articulo">Artículo:</label>
+        <textarea id="articulo" name="articulo"></textarea>
+      </div>
 
-</div>
+      <button class="submit" type="button" (click)="clickheader()">
+        Publicar
+      </button>
+    </form>
+    }
 
-</section>
-  
-</main>   
+    <div class="adventures">
+      <h2 class="titleh2">Tandas</h2>
+      <ul class="list">
+        <!--Traquear el @for para ello si el array tiene ID en este caso pondriamos
+        item.id
+        @for (item of arrPublicaciones; track item.id){}
+        de este modo si se modifica el array solo pinta el elemaneto que se ha modificado
+          @for (item of arrPublicaciones; track $index; let impar = $odd; let par
+        = $even; let last = $last; let first = $first) {}
+        Para obtener el index del array se usa $index ejemplo: let i = $index
+        -->
+        @for (item of arrPublicaciones; track $index; let impar = $odd; let par
+        = $even; let last = $last; let first = $first) {
+
+        <li class="item">
+          <h3 class="title">
+            {{item.titulo}} -- Index = {{$index}} -- Impar= {{impar}} --
+            Par= {{par}} --
+          </h3>
+          <p class="date">{{item.fecha}}</p>
+          <!--Asi es como se usan las property binding
+          [src]="item.imagen" - En este caso ponemos el nombre de la propiedad entre corchetes
+          y le pasamos como valor del objeto que queremos mostrar en este caso item.imagen
+          -->
+          <img class="img" [src]="item.imagen" [alt]="item.titulo" />
+          <p class="article">{{ item.noticia }}</p>
+        </li>
+        }
+      </ul>
+    </div>
+  </section>
+</main>
