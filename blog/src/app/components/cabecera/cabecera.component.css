@@ -1,21 +1,14 @@
 .cabecera {
   background-color: #f8f9fa;
-  padding: 10px;
-  
+  padding: 10px;  
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, "Helvetica Neue", Helvetica, sans-serif;
   font-size: medium;
   background-color: rgb(57, 54, 54);
-
   position:sticky;
   top: 0;
-
-  
-  
- 
 }
 
-.h2cab {
-  
+.h2cab {  
     font-size: 2rem;
     padding-left: 10px;
     color: whitesmoke;
