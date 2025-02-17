@@ -10,10 +10,14 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './formulario.component.css',
 })
 export class FormularioComponent {
-  titleHead: string = 'Añade tu nueva tanda';
+  titleHead: string = 'Nueva publicación:';
   pulseButton: string = 'Post';
   visibleNoticiaIndex: number | null = null;
 
+  dateInvalid: boolean = false;
+  imgInvalid: boolean = false;
+  titleInvalid: boolean = false;
+  articleInvalid: boolean = false;
   fecha: string = '';
   imagen: string = '';
   titulo: string = '';
@@ -51,26 +55,39 @@ export class FormularioComponent {
     if (this.fecha === '') {
       this.errorFrm = true;
       this.msgError.set('La fecha no puede estar vacía');
+      this.dateInvalid = true;
       return;
+    } else {
+        this.dateInvalid = false;
     }
 
     if (this.imagen === '') {
       this.errorFrm = true;
       this.msgError.set('Por favor selecciona una imagen');
+      this.imgInvalid = true;
       return;
+    } else {
+        this.imgInvalid = false;
     }
 
     if (this.titulo === '') {
       this.errorFrm = true;
       this.msgError.set('El titulo no puede estar vacío');
+      this.titleInvalid = true;
       return;
+    } else {  
+        this.titleInvalid = false;
     }
 
     if (this.noticia === '') {
       this.errorFrm = true;
       this.msgError.set('Por favor escribe tu articulo');
+      this.articleInvalid = true;
       return;
+    } else {
+        this.articleInvalid = false;
     }
+
 
     this.arrPublicaciones.push({
       titulo: this.titulo,
