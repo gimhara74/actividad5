@@ -1,6 +1,6 @@
 export interface IPublicacion {
-    titulo: string;
-    imagen: string;
-    noticia: string;
-    fecha: Date;
+  titulo: string;
+  imagen: string;
+  noticia: string;
+  fecha: string;
 }
