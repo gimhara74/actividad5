@@ -91,8 +91,7 @@ input {
 .select {
   display: block;  
   font-size: 1.2rem;
-  justify-content: center;
-  
+  justify-content: center;  
 }
 
 .head_tabs {
@@ -184,8 +183,7 @@ input {
 .titleh1 {
   font-size: 2rem;
   justify-content: left;
-  text-align: left;
-  
+  text-align: left;  
 }
 
 .frm {

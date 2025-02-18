@@ -1,4 +1,4 @@
-import { Component, signal, Signal, WritableSignal } from '@angular/core';
+import { Component, signal, WritableSignal } from '@angular/core';
 import { IPublicacion } from '../../interfaces/ipublicacion.interfaces';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
