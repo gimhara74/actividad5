@@ -10,11 +10,8 @@ import { FormsModule } from '@angular/forms';
 
   styleUrl: './blog.component.css',
 })
-
 export class BlogComponent {
   titleHead: string = 'Añade tu nueva tanda';
-
-
 
   pulseButton: string = 'Post';
   visibleNoticiaIndex: number | null = null;
@@ -52,51 +49,55 @@ export class BlogComponent {
     },
   ];
 
-
- 
   ngOnInit(): void {
     this.publicaciones = this.arrPublicaciones;
     console.log('Publicaciones:', this.publicaciones);
-
   }
 
   submitHandler(): void {
     if (this.fecha === '') {
       this.errorFrm = true;
-      this.msgError.update((msg: string) => msg= 'Por favor selecciona una fecha');
+      this.msgError.update(
+        (msg: string) => (msg = 'Por favor selecciona una fecha')
+      );
       this.dateInvalid = true;
       return;
     } else {
-        this.dateInvalid = false;
+      this.dateInvalid = false;
     }
 
     if (this.imagen === '') {
-      this.errorFrm = true;      
-      this.msgError.update((msg: string) => msg= 'Por favor selecciona una imagen');
+      this.errorFrm = true;
+      this.msgError.update(
+        (msg: string) => (msg = 'Por favor selecciona una imagen')
+      );
       this.imgInvalid = true;
       return;
     } else {
-        this.imgInvalid = false;
+      this.imgInvalid = false;
     }
 
     if (this.titulo === '') {
-      this.errorFrm = true;      
-      this.msgError.update((msg: string) => msg= 'Por favor asigna un titulo');
+      this.errorFrm = true;
+      this.msgError.update(
+        (msg: string) => (msg = 'Por favor asigna un titulo')
+      );
       this.titleInvalid = true;
       return;
-    } else {  
-        this.titleInvalid = false;
+    } else {
+      this.titleInvalid = false;
     }
 
     if (this.noticia === '') {
-      this.errorFrm = true;      
-      this.msgError.update((msg: string) => msg= 'Por favor escribe tu articulo');
+      this.errorFrm = true;
+      this.msgError.update(
+        (msg: string) => (msg = 'Por favor escribe tu articulo')
+      );
       this.articleInvalid = true;
       return;
     } else {
-        this.articleInvalid = false;
+      this.articleInvalid = false;
     }
-
 
     this.arrPublicaciones.push({
       titulo: this.titulo,
@@ -121,10 +122,11 @@ export class BlogComponent {
     this.pulseButton = boton;
   }
 
-  toggleNoticia(index: number): void {
-    this.visibleNoticiaIndex =
-    this.visibleNoticiaIndex === index ? null : index;
-  }
+  //  toggleNoticia(index: number): void {
+  //    this.visibleNoticiaIndex =
+  //    this.visibleNoticiaIndex === index ? null : index;
+  //  }
+
   changeHandler(event: any): void {
     this.publicaciones = this.arrPublicaciones.filter((result) =>
       result.fecha.includes(event.target.value)
@@ -135,8 +137,4 @@ export class BlogComponent {
   formatDate(fecha: string): string {
     return new Date(fecha).toLocaleDateString();
   }
-
 }
-    
-
-
