@@ -407,6 +407,17 @@
     height: 40px;
   }
 
+
+  .adventures_item {
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
     /* Imagenes de cada post los post */
   .img {
     text-align: center;
