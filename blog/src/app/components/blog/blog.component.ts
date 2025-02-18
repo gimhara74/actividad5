@@ -4,12 +4,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-formulario',
+  selector: 'app-blog',
   imports: [CommonModule, FormsModule],
-  templateUrl: './formulario.component.html',
-  styleUrl: './formulario.component.css',
+  templateUrl: './blog.component.html',
+  styleUrl: './blog.component.css',
 })
-export class FormularioComponent {
+export class BlogComponent {
   titleHead: string = 'Añade tu nueva tanda';
   pulseButton: string = 'Post';
   visibleNoticiaIndex: number | null = null;
@@ -43,8 +43,9 @@ export class FormularioComponent {
     },
   ];
 
+ 
   ngOnInit() {
-    this.publicaciones = this.arrPublicaciones;
+    this.publicaciones = this.arrPublicaciones;    
   }
 
   submitHandler() {
@@ -83,7 +84,7 @@ export class FormularioComponent {
     this.pulseButton = 'Post';
 
     this.errorFrm = false;
-    this.fecha = '';
+   // this.fecha = '';
     this.titulo = '';
     this.imagen = '';
     this.noticia = '';

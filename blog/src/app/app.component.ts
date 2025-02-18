@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { CabeceraComponent } from './components/cabecera/cabecera.component';
-import { FormularioComponent } from './components/formulario/formulario.component';
+import { BlogComponent } from "./components/blog/blog.component";
 
 @Component({
   selector: 'app-root',
-  imports: [CabeceraComponent, FormularioComponent],
+  imports: [CabeceraComponent, BlogComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
