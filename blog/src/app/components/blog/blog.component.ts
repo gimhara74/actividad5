@@ -84,7 +84,7 @@ export class BlogComponent {
     this.pulseButton = 'Post';
 
     this.errorFrm = false;
-   // this.fecha = '';
+    this.fecha = '';
     this.titulo = '';
     this.imagen = '';
     this.noticia = '';
@@ -98,7 +98,7 @@ export class BlogComponent {
 
   toggleNoticia(index: number) {
     this.visibleNoticiaIndex =
-      this.visibleNoticiaIndex === index ? null : index;
+    this.visibleNoticiaIndex === index ? null : index;
   }
   changeHandler(event: any) {
     this.publicaciones = this.arrPublicaciones.filter((result) =>
