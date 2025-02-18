@@ -1,11 +1,25 @@
 .cabecera {
   background-color: #f8f9fa;
   padding: 10px;
-  margin-bottom: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif, "Helvetica Neue",
+    Helvetica, sans-serif;
   font-size: medium;
+  background-color: tomato;
+  position: sticky;
+  top: 0;
 }
 
 .h2cab {
-    font-size: 2rem;
+  font-size: 2rem;
+  padding-left: 10px;
+  color: whitesmoke;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  padding: 10px 20px; /* Ajusta el relleno según sea necesario */
 }

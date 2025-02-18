@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-cabecera',
   imports: [],
   templateUrl: './cabecera.component.html',
-  styleUrl: './cabecera.component.css'
+  styleUrl: './cabecera.component.css',
 })
-export class CabeceraComponent {
-
-}
+export class CabeceraComponent {}
