@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { CabeceraComponent } from './components/cabecera/cabecera.component';
 import { BlogComponent } from "./components/blog/blog.component";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> featured-office-blog
 
 @Component({
   selector: 'app-root',
