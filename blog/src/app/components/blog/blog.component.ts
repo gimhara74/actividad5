@@ -131,6 +131,7 @@ export class BlogComponent {
     this.publicaciones = this.arrPublicaciones.filter((result) =>
       result.fecha.includes(event.target.value)
     );
+    
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
   }
 

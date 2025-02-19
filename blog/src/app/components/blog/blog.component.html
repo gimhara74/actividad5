@@ -1,13 +1,13 @@
 <main class="main section">
   <section class="section">
     <div class="head_post">
-      <div class="head_post_intro">
+      <div class="adventures_item">
         <p class="intro">
           Aquí podrás ver últimas noticias de tandas, de la presente temporada
           2025
         </p>
-        <img src="/images/salida.jpg" alt="salida" class="img_intro" />
-        <p class="head_post_presentation">
+        <img src="/images/salida.jpg" alt="salida" class="img" />
+        <p class="noticia">
           En este blog, encontrarás información próximas tandas y rutas 2025. Si
           te gusta la velocidad y la adrenalina, no dudes en seguirnos.
           Diviertete y disfruta de la velocidad con nosotros.
@@ -34,7 +34,7 @@
       <div class="head_frm">
         <label for="selector" class="select">Filtrar</label>
         <select id="selector" class="select" (change)="changeHandler($event)">
-          <option value="">Selecciona una fecha</option>
+          <option value="">Sin filtro</option>
           @for (item of arrPublicaciones; track $index) {
           <option value="{{ item.fecha }}">{{ item.fecha }}</option>
           } @empty {
