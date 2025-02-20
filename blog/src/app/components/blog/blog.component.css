@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +26,7 @@ input {
   height: 100%;
   box-sizing: border-box;
 }
-/* Seccion principal = Body*/
+
 .section {
   display: flex;
   flex-direction: column;
@@ -35,21 +34,19 @@ input {
   justify-content: center;
   gap: 1rem;
   padding: 10px;
-  
+
   margin: 0;
 }
-/*Contenedor Post principal*/
+
 .head_post {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   border-bottom: 1px solid black;
   box-sizing: border-box;
-  /* background-color: rgb(178, 19, 136);     */
 }
-/* Cabecera articulo principal incluye la foto pal + texto cabecera foto
-      y texto pie articulo principal foto mia salida a pista */
+
 .head_post_intro {
   text-align: center;
   font-size: 1.5rem;
@@ -59,7 +56,7 @@ input {
   margin: 0;
   box-sizing: border-box;
 }
-/* Texto cabecera articulo principal */
+
 .intro {
   text-align: center;
   padding: 10px;
@@ -67,9 +64,9 @@ input {
   font-weight: bold;
 }
 
-/* Padre botones Post New Post*/
 .head_tabs {
-  width: 52%;
+  width: 40%;
+  text-align: center;
   margin: 0;
   font-size: 1rem;
   padding: 20px;
@@ -88,36 +85,24 @@ input {
   background-color: black;
   color: white;
   text-align: center;
-  transition: 0.5s;
-
-  &:hover {
-    background-color: tomato;
-    color: black;
-  }
 }
-
-/* Fin botones */
-
-/* Filtar */
 
 .head_frm {
   display: flex;
   justify-content: center;
-  width: 50%;
+  width: 38%;
   padding: 15px;
   border: 1px solid black;
   border-radius: 15px;
   margin-bottom: 15px;
 }
 
-/* List filtrar */
 .select {
   display: block;
   font-size: 1.2rem;
   justify-content: center;
 }
 
-/* Formulario publicacion */
 .frm {
   display: flex;
   flex-direction: column;
@@ -128,7 +113,7 @@ input {
   border: 1px solid black;
   border-radius: 15px;
 }
-/* Titulo encabezado formulario*/
+
 .titleh1 {
   font-size: 2rem;
   justify-content: left;
@@ -168,7 +153,6 @@ input {
   resize: vertical;
 }
 
-/* Text area escribir articulo */
 .form-group_articulo {
   display: flex;
   flex-direction: column;
@@ -191,7 +175,7 @@ input {
   align-items: center;
   justify-content: center;
 }
-/* Imagenes de cada post los post */
+
 .img {
   text-align: center;
   width: 40%;
@@ -239,13 +223,12 @@ input {
   margin-bottom: 20px;
 }
 
-/* Fecha de cada Post*/
 .date {
   font-size: 1.2rem;
   text-align: center;
   margin-bottom: 10px;
 }
-/* Campo noticia del post*/
+
 .noticia {
   width: 40%;
   text-align: left;
@@ -267,6 +250,11 @@ input {
   background-color: rgb(146, 147, 146);
   color: white;
   font-size: 1.5rem;
+}
+
+.head_tabs .tabs .activo {
+  background-color: tomato;
+  color: black;
 }
 
 @media (max-width: 860px) {
@@ -300,7 +288,6 @@ input {
     padding: 10px;
   }
 
- 
   .frm {
     flex-direction: column;
     align-items: center;

@@ -35,7 +35,7 @@
         <label for="selector" class="select">Filtrar</label>
         <select id="selector" class="select" (change)="changeHandler($event)">
           <option value="">Sin filtro</option>
-          @for (item of arrPublicaciones; track $index) {
+          @for (item of arrPublicaciones; track item.fecha) {
           <option value="{{ item.fecha }}">{{ item.fecha }}</option>
           } @empty {
           <h2>No hay publicaciones en la fecha seleccionada.</h2>
@@ -106,8 +106,7 @@
 
     <div class="adventures">
       <ul class="adventures_list">
-        @for (item of publicaciones; track $index; let impar = $odd; let par =
-        $even; let last = $last; let first = $first) {
+        @for (item of publicaciones; track item.fecha) {
         <article class="adventures_article">
           <div class="adventures_item">
             <h3 class="article_title">{{ item.titulo }}</h3>

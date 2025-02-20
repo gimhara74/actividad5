@@ -51,7 +51,6 @@ export class BlogComponent {
 
   ngOnInit(): void {
     this.publicaciones = this.arrPublicaciones;
-    console.log('Publicaciones:', this.publicaciones);
   }
 
   submitHandler(): void {
@@ -122,16 +121,11 @@ export class BlogComponent {
     this.pulseButton = boton;
   }
 
-  //  toggleNoticia(index: number): void {
-  //    this.visibleNoticiaIndex =
-  //    this.visibleNoticiaIndex === index ? null : index;
-  //  }
-
   changeHandler(event: any): void {
     this.publicaciones = this.arrPublicaciones.filter((result) =>
       result.fecha.includes(event.target.value)
     );
-    
+
     window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
   }
 
